@@ -15,3 +15,20 @@
 
     Clone the repository from github using github desktop
     ```
+5. Copy and paste your book folder into the local repository. Now on github desktop you will see all the changes. "Commit to main" and then "Push Origin". You will see your repository populated with all your files.
+    ```{figure} /_static/steps/commit_git.png
+    :name: commit_git
+
+    Commit and sync the files onto the github repository
+    ```
+6. Install ghp-import to compile and host your book on Github-pages. Go to your anaconda environment and activate your jupyterbook environment as shown here {doc}`021installation`. Once you activated the environment, execute this command.
+    ```
+    pip install ghp-import
+    ```
+
+7. Go to the settings of your github repository. Turn on gh-pages as shown in {numref}`Figure %s <gh_pages>`.
+    ```{figure} /_static/steps/gh_pages.png
+    :name: gh_pages
+
+    Turn on the gh-pages settings on your repository.
+    ```
