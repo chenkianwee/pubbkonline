@@ -1,0 +1,14 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: docs/010intro
+- file: docs/020steps
+  sections:
+    - file: docs/021installation
+    - file: docs/022createbook
+    - file: docs/023editbook
+    - file: docs/024addfig
+    - file: docs/025hyperref
+    - file: docs/026pubonline
+    - file: docs/050markdown
+    - file: docs/051notebooks
