@@ -47,7 +47,6 @@
     ```
     a. Build the book. You can see the result in your browser.
     ```{figure} /_static/steps/ref_res.png
-    :scale: 50%
     :name: ref_res
 
     Referencing your figure in your text.

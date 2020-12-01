@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction &#8212; CKW Notes on Publishing an Online Book with Jupyter-book</title>
+    <title>Publish your Book on Github &#8212; CKW Notes on Publishing an Online Book with Jupyter-book</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Steps to Write a Jupyter Book" href="020steps.html" />
+    <link rel="prev" title="Adding a Citation" href="026citation.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -86,18 +86,18 @@
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="010intro.html">
    Introduction
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="020steps.html">
    Steps to Write a Jupyter Book
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="021installation.html">
      Installation
@@ -128,8 +128,8 @@
      Adding a Citation
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="027pubonline.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Publish your Book on Github
     </a>
    </li>
@@ -177,7 +177,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/010intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/027pubonline.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -197,7 +197,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/010intro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/027pubonline.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -225,11 +225,50 @@
         
               <div>
                 
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>This is written to guide you through publishing your book online with jupyter-book and hosting it on github. I wrote this guide as an exercise for me to get familiar with the jupyter-book library. At the same time it serves a note for myself. This guide is based on information from <a class="reference external" href="https://jupyterbook.org/intro.html">jupyterbook</a> for more information please refer to the link.</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="publish-your-book-on-github">
+<h1>Publish your Book on Github<a class="headerlink" href="#publish-your-book-on-github" title="Permalink to this headline">¶</a></h1>
+<ol>
+<li><p><span class="xref myst">Register a Github account</span></p></li>
+<li><p>Once registered. Create a new repository as shown (<a class="reference internal" href="#create-repo"><span class="std std-numref">Figure 18</span></a>).</p>
+<div class="figure align-default" id="create-repo">
+<a class="reference internal image-reference" href="../_images/create_repo.png"><img alt="../_images/create_repo.png" src="../_images/create_repo.png" style="width: 586.4px; height: 722.4000000000001px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Create a repository on Github</span><a class="headerlink" href="#create-repo" title="Permalink to this image">¶</a></p>
 </div>
+</li>
+<li><p>For people who are not comfortable with CMD terminal. <a class="reference external" href="https://desktop.github.com/">Download Github Desktop</a>. The rest of the steps assumed you are using github desktop.</p></li>
+<li><p>Clone the repository you just created onto your local computer as shown in <a class="reference internal" href="#clone-repo"><span class="std std-numref">Figure 19</span></a>.</p>
+<div class="figure align-default" id="clone-repo">
+<img alt="../_images/clone_repo.png" src="../_images/clone_repo.png" />
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Clone the repository from github using github desktop</span><a class="headerlink" href="#clone-repo" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+<li><p>Copy and paste your book folder into the local repository. Now on github desktop you will see all the changes. “Commit to main” and then “Push Origin”. You will see your repository populated with all your files.</p>
+<div class="figure align-default" id="commit-git">
+<img alt="../_images/commit_git.png" src="../_images/commit_git.png" />
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Commit and sync the files onto the github repository</span><a class="headerlink" href="#commit-git" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+<li><p>Install ghp-import to compile and host your book on Github-pages. Go to your anaconda environment and activate your jupyterbook environment as shown here <a class="reference internal" href="021installation.html"><span class="doc">Installation</span></a>. Once you activated the environment, execute this command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+</pre></div>
+</div>
+</li>
+<li><p>Go to the settings of your github repository. Turn on gh-pages, set your branch to gh-pages and folder to /root as shown in <a class="reference internal" href="#gh-pages"><span class="std std-numref">Figure 21</span></a>.</p>
+<div class="figure align-default" id="gh-pages">
+<img alt="../_images/gh_pages.png" src="../_images/gh_pages.png" />
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Turn on the gh-pages settings on your repository.</span><a class="headerlink" href="#gh-pages" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+<li><p>Once that is done. On your local computer, cd to your book folder (the folder should contain the _build directory) and execute the following command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="ghp-import">
+<img alt="../_images/ghp_import.png" src="../_images/ghp_import.png" />
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Successfully executed ghp-import.</span><a class="headerlink" href="#ghp-import" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+</ol>
 </div>
 
     <script type="text/x-thebe-config">
@@ -260,7 +299,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="020steps.html" title="next page">Steps to Write a Jupyter Book</a>
+    <a class='left-prev' id="prev-link" href="026citation.html" title="previous page">Adding a Citation</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
