@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reference to Other Documents, Hyperlink and Folder Structure &#8212; CKW Notes on Publishing an Online Book with Jupyter-book</title>
+    <title>Adding a Citation &#8212; CKW Notes on Publishing an Online Book with Jupyter-book</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Adding a Citation" href="026citation.html" />
-    <link rel="prev" title="Add Figure in your book" href="024addfig.html" />
+    <link rel="next" title="Publish your Book on Github" href="027pubonline.html" />
+    <link rel="prev" title="Reference to Other Documents, Hyperlink and Folder Structure" href="025hyperref.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -119,13 +119,13 @@
      Add Figure in your book
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="025hyperref.html">
      Reference to Other Documents, Hyperlink and Folder Structure
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="026citation.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Adding a Citation
     </a>
    </li>
@@ -178,7 +178,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/025hyperref.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/026citation.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -198,7 +198,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/025hyperref.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/026citation.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -219,6 +219,25 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -226,26 +245,36 @@
         
               <div>
                 
-  <div class="section" id="reference-to-other-documents-hyperlink-and-folder-structure">
-<h1>Reference to Other Documents, Hyperlink and Folder Structure<a class="headerlink" href="#reference-to-other-documents-hyperlink-and-folder-structure" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="adding-a-citation">
+<h1>Adding a Citation<a class="headerlink" href="#adding-a-citation" title="Permalink to this headline">¶</a></h1>
 <ol>
-<li><p>You can reference to other documents in the book by using this command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{doc}`020steps`
+<li><p>You will need to have a “reference.bib” file in your book folder.</p></li>
+<li><p>You can add a citation with this command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{cite}`chen_exploring_2020`
 </pre></div>
 </div>
 </li>
-<li><p>You can create a hyperlink with this command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">text</span> <span class="n">that</span> <span class="n">will</span> <span class="n">appear</span> <span class="ow">in</span> <span class="n">content</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">the</span><span class="o">-</span><span class="n">hyperlink</span><span class="o">.</span><span class="n">com</span><span class="p">)</span>
+<li><p>You can generate the bibliography with this command. Remember to specify the right path to the .bib file. If the .bib file is in the previous folder specify it as “../references.bib”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
+{bibliography} references.bib
+```
 </pre></div>
-</div>
-</li>
-<li><p>You can move the documents to a “docs” folder for a cleaner folder structure. You just have to specify the files in the “_toc.yml” file as “docs/file”. This is shown in <a class="reference internal" href="#restructure-folder"><span class="std std-numref">Figure 17</span></a></p>
-<div class="figure align-default" id="restructure-folder">
-<img alt="../_images/restructure_folder.png" src="../_images/restructure_folder.png" />
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">You can restructure your book folder as shown</span><a class="headerlink" href="#restructure-folder" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ol>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>I want to cite this article <a class="bibtex reference internal" href="#chen-exploring-2020" id="id1">[CTM+20]</a>.</p>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-bibliography-docs/026citation-0"><dl class="citation">
+<dt class="bibtex label" id="chen-exploring-2020"><span class="brackets"><a class="fn-backref" href="#id1">CTM+20</a></span></dt>
+<dd><p>Kian Wee Chen, Eric Teitelbaum, Forrest Meggers, Jovan Pantelic, and Adam Rysanek. Exploring membrane-assisted radiant cooling for designing comfortable naturally ventilated spaces in the tropics. <em>Building Research &amp; Information</em>, pages 1–13, November 2020. Publisher: Routledge. URL: <a class="reference external" href="https://doi.org/10.1080/09613218.2020.1847025">https://doi.org/10.1080/09613218.2020.1847025</a>, <a class="reference external" href="https://doi.org/10.1080/09613218.2020.1847025">doi:10.1080/09613218.2020.1847025</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -276,8 +305,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="024addfig.html" title="previous page">Add Figure in your book</a>
-    <a class='right-next' id="next-link" href="026citation.html" title="next page">Adding a Citation</a>
+    <a class='left-prev' id="prev-link" href="025hyperref.html" title="previous page">Reference to Other Documents, Hyperlink and Folder Structure</a>
+    <a class='right-next' id="next-link" href="027pubonline.html" title="next page">Publish your Book on Github</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
