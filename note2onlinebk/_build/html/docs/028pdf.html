@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reference to Other Documents, Hyperlink and Folder Structure &#8212; CKW Notes on Publishing an Online Book with Jupyter-book</title>
+    <title>Generate PDF &#8212; CKW Notes on Publishing an Online Book with Jupyter-book</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,8 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Adding a Citation" href="026citation.html" />
-    <link rel="prev" title="Add Figure in your book" href="024addfig.html" />
+    <link rel="prev" title="Publish your Book on Github" href="027pubonline.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -119,8 +118,8 @@
      Add Figure in your book
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="025hyperref.html">
      Reference to Other Documents, Hyperlink and Folder Structure
     </a>
    </li>
@@ -134,8 +133,8 @@
      Publish your Book on Github
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="028pdf.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Generate PDF
     </a>
    </li>
@@ -183,7 +182,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/025hyperref.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/028pdf.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -203,7 +202,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/025hyperref.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/028pdf.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -231,23 +230,17 @@
         
               <div>
                 
-  <div class="section" id="reference-to-other-documents-hyperlink-and-folder-structure">
-<h1>Reference to Other Documents, Hyperlink and Folder Structure<a class="headerlink" href="#reference-to-other-documents-hyperlink-and-folder-structure" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="generate-pdf">
+<h1>Generate PDF<a class="headerlink" href="#generate-pdf" title="Permalink to this headline">¶</a></h1>
 <ol>
-<li><p>You can reference to other documents in the book by using this command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{doc}`020steps`
+<li><p>Install pyppeteer with the following command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyppeteer</span>
 </pre></div>
 </div>
 </li>
-<li><p>You can create a hyperlink with this command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">text</span> <span class="n">that</span> <span class="n">will</span> <span class="n">appear</span> <span class="ow">in</span> <span class="n">content</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">the</span><span class="o">-</span><span class="n">hyperlink</span><span class="o">.</span><span class="n">com</span><span class="p">)</span>
+<li><p>Then build your book with the following command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">mybookname</span><span class="o">/</span> <span class="o">--</span><span class="n">builder</span> <span class="n">pdfhtml</span>
 </pre></div>
-</div>
-</li>
-<li><p>You can move the documents to a “docs” folder for a cleaner folder structure. You just have to specify the files in the “_toc.yml” file as “docs/file”. This is shown in <a class="reference internal" href="#restructure-folder"><span class="std std-numref">Figure 17</span></a></p>
-<div class="figure align-default" id="restructure-folder">
-<img alt="../_images/restructure_folder.png" src="../_images/restructure_folder.png" />
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">You can restructure your book folder as shown</span><a class="headerlink" href="#restructure-folder" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ol>
@@ -281,8 +274,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="024addfig.html" title="previous page">Add Figure in your book</a>
-    <a class='right-next' id="next-link" href="026citation.html" title="next page">Adding a Citation</a>
+    <a class='left-prev' id="prev-link" href="027pubonline.html" title="previous page">Publish your Book on Github</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
