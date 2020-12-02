@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CKW Notes on Publishing an Online Book with Jupyter-book</title>
+    <title>Introduction &#8212; CKW Notes on Publishing an Online Book with Jupyter-book</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,6 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Steps to Write a Jupyter Book" href="020steps.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -68,8 +69,87 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-2 bd-sidebar site-navigation show single-page" id="site-navigation">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">CKW Notes on Publishing an Online Book with Jupyter-book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="#">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="020steps.html">
+   Steps to Write a Jupyter Book
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="021installation.html">
+     Installation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="022createbook.html">
+     Create a Book Template with Jupyter-book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="023editbook.html">
+     Edit the Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="024addfig.html">
+     Add Figure in your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="025hyperref.html">
+     Reference to Other Documents, Hyperlink and Folder Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="026citation.html">
+     Adding a Citation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="027pubonline.html">
+     Publish your Book on Github
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="028pdf.html">
+     Generate PDF
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -84,7 +164,33 @@
     </div>
     <div class="col pl-2 topbar-main">
         
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
         
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/010intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -117,55 +223,6 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toctree-l2 toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="docs/010intro.html#document-docs/021installation">
-   Installation
-  </a>
- </li>
- <li class="toctree-l2 toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="docs/010intro.html#document-docs/022createbook">
-   Create a Book Template with Jupyter-book
-  </a>
- </li>
- <li class="toctree-l2 toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="docs/010intro.html#document-docs/023editbook">
-   Edit the Book
-  </a>
- </li>
- <li class="toctree-l2 toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="docs/010intro.html#document-docs/024addfig">
-   Add Figure in your book
-  </a>
- </li>
- <li class="toctree-l2 toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="docs/010intro.html#document-docs/025hyperref">
-   Reference to Other Documents, Hyperlink and Folder Structure
-  </a>
- </li>
- <li class="toctree-l2 toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="docs/010intro.html#document-docs/026citation">
-   Adding a Citation
-  </a>
- </li>
- <li class="toctree-l2 toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="docs/010intro.html#document-docs/027pubonline">
-   Publish your Book on Github
-  </a>
- </li>
- <li class="toctree-l2 toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="docs/010intro.html#document-docs/028pdf">
-   Generate PDF
-  </a>
- </li>
-</ul>
-
-        </nav>
-        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -177,295 +234,6 @@
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>This is written to guide you through publishing your book online with jupyter-book and hosting it on github. I wrote this guide as an exercise for me to get familiar with the jupyter-book library. At the same time it serves a note for myself. This guide is based on information from <a class="reference external" href="https://jupyterbook.org/intro.html">jupyterbook</a> for more information please refer to the link.</p>
 <div class="toctree-wrapper compound">
-<span id="document-docs/020steps"></span><div class="section" id="steps-to-write-a-jupyter-book">
-<h2>Steps to Write a Jupyter Book<a class="headerlink" href="#steps-to-write-a-jupyter-book" title="Permalink to this headline">¶</a></h2>
-<p>This section provides step by step guide to publish your book. I will start with the installation requirement. I am using a Windows machine for executing the steps, if you are using either a Linux or MacOS machine, there might be slight differences to the result. Please refer to the <a class="reference external" href="https://jupyterbook.org/intro.html">original guide</a> if you run into any issue with your machine.</p>
-<div class="toctree-wrapper compound">
-<span id="document-docs/021installation"></span><div class="section" id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
-<ol>
-<li><p>Install the Anaconda Individual Edition
-<br/><br/>
-a. <a class="reference external" href="https://www.anaconda.com/products/individual">Download the Anaconda Individual</a>.<br />
-b. <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Install the Anaconda Individual</a>.
-<br/><br/></p></li>
-<li><p>Once Anaconda is installed. Create an environment called “jupyterbook” for installing the required libraries. This isolate all changes to within a Python environment.
-<br/><br/>
-a. Create an environment with the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">jupyterbook</span>
-</pre></div>
-</div>
-</li>
-<li><p>Install Jupyter Book in the environment created.
-<br/><br/>
-a. Activate the environment with the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">jupyterbook</span>
-</pre></div>
-</div>
-<p>b. Install Jupyter-Book with the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</div>
-<span id="document-docs/022createbook"></span><div class="section" id="create-a-book-template-with-jupyter-book">
-<h3>Create a Book Template with Jupyter-book<a class="headerlink" href="#create-a-book-template-with-jupyter-book" title="Permalink to this headline">¶</a></h3>
-<ol>
-<li><p>Change your directory to where you want to store your book content.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">specify_your_dir_here</span><span class="o">/</span>
-</pre></div>
-</div>
-</li>
-<li><p>Create a template book with this command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">mynewbook</span><span class="o">/</span>
-</pre></div>
-</div>
-</li>
-<li><p>Go into the “mynewbook” folder. You will see the files shown below. <a class="reference internal" href="#template-book"><span class="std std-numref">Figure 1</span></a>
-<br/><br/></p>
-<div class="figure align-default" id="template-book">
-<a class="reference internal image-reference" href="../_images/template_book.png"><img alt="../_images/template_book.png" src="../_images/template_book.png" style="width: 632.0px; height: 237.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Structure of a template book</span><a class="headerlink" href="#template-book" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>Build the book with the following command. If the build is successful, you will see the message shown in <a class="reference internal" href="#build-book"><span class="std std-numref">Figure 2</span></a>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">mynewbook</span>
-</pre></div>
-</div>
-<div class="figure align-default" id="build-book">
-<a class="reference internal image-reference" href="../_images/build_book.png"><img alt="../_images/build_book.png" src="../_images/build_book.png" style="width: 738.0px; height: 227.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Success message of a build</span><a class="headerlink" href="#build-book" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>Go to mynewbook -&gt; _build -&gt; html -&gt; index.html. Double click on the index.html. You will be able to view the book in your default browser as shown in <a class="reference internal" href="#browse-book"><span class="std std-numref">Figure 3</span></a>.
-<br/><br/></p>
-<div class="figure align-default" id="browse-book">
-<img alt="../_images/browse_book.png" src="../_images/browse_book.png" />
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Successful build of a book viewed in the browser</span><a class="headerlink" href="#browse-book" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-</ol>
-</div>
-<span id="document-docs/023editbook"></span><div class="section" id="edit-the-book">
-<h3>Edit the Book<a class="headerlink" href="#edit-the-book" title="Permalink to this headline">¶</a></h3>
-<ol>
-<li><p>Use a text editor to edit the files. I am using atom. <a class="reference external" href="https://atom.io/">Download Atom here</a></p></li>
-<li><p>Open Atom and add the mynewbook folder. <a class="reference internal" href="#atom-initial"><span class="std std-numref">Figure 4</span></a>
-<br/><br/></p>
-<div class="figure align-default" id="atom-initial">
-<img alt="../_images/atom_initial.png" src="../_images/atom_initial.png" />
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">The open screen of Atom</span><a class="headerlink" href="#atom-initial" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>Once added you will be able to see the structure of the book in <a class="reference internal" href="#atom-folder"><span class="std std-numref">Figure 5</span></a>.
-<br/><br/></p>
-<div class="figure align-default" id="atom-folder">
-<img alt="../_images/atom_folder.png" src="../_images/atom_folder.png" />
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The folder structure of the book in Atom IDE</span><a class="headerlink" href="#atom-folder" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>To change the title of the book, go to the “_config.yml” file. Change the title of the book from “My sample book” -&gt; “My notebook”. Change the author to your name (<a class="reference internal" href="#atom-config"><span class="std std-numref">Figure 6</span></a>). Save the change. Build the book with the command from the 4th Step of <a class="reference internal" href="docs/010intro.html#document-docs/022createbook"><span class="doc">Create a Book Template with Jupyter-book</span></a>.
-<br/><br/></p>
-<div class="figure align-default" id="atom-config">
-<img alt="../_images/atom_config.png" src="../_images/atom_config.png" />
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Editing the _config.yml file</span><a class="headerlink" href="#atom-config" title="Permalink to this image">¶</a></p>
-</div>
-<p>a. The result of the change (<a class="reference internal" href="#title-change"><span class="std std-numref">Figure 7</span></a>).
-<br/><br/></p>
-<div class="figure align-default" id="title-change">
-<img alt="../_images/browse_title_change.png" src="../_images/browse_title_change.png" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Result from editing the _config.yml</span><a class="headerlink" href="#title-change" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>Next I will make changes to the _toc.yml. This file controls the table of content on the left side of the screen. I will add a new file and some content to the file.
-<br/><br/>
-a. I add a new file called newcontent as shown in <a class="reference internal" href="#edit-toc"><span class="std std-numref">Figure 8</span></a>. Remember to save the change and then build the book again.
-<br/><br/></p>
-<div class="figure align-default" id="edit-toc">
-<img alt="../_images/edit_toc.png" src="../_images/edit_toc.png" />
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Editing the _toc.yml file</span><a class="headerlink" href="#edit-toc" title="Permalink to this image">¶</a></p>
-</div>
-<p>b. With Atom add a file called “newcontent.md” as shown in <a class="reference internal" href="#new-content"><span class="std std-numref">Figure 9</span></a>. Add in the title “# My new content”.
-<br/><br/></p>
-<div class="figure align-default" id="new-content">
-<img alt="../_images/new_content.png" src="../_images/new_content.png" />
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Create a newcontent.md file</span><a class="headerlink" href="#new-content" title="Permalink to this image">¶</a></p>
-</div>
-<p>c. Build the book. You will be able to see the change as shown in <a class="reference internal" href="#toc-res"><span class="std std-numref">Figure 10</span></a></p>
-<div class="figure align-default" id="toc-res">
-<img alt="../_images/toc_res.png" src="../_images/toc_res.png" />
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Result of adding a newcontent.md file</span><a class="headerlink" href="#toc-res" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-</ol>
-</div>
-<span id="document-docs/024addfig"></span><div class="section" id="add-figure-in-your-book">
-<h3>Add Figure in your book<a class="headerlink" href="#add-figure-in-your-book" title="Permalink to this headline">¶</a></h3>
-<ol>
-<li><p>Add a new folder “_static” in the book folder as shown in <a class="reference internal" href="#add-static"><span class="std std-numref">Figure 11</span></a>.
-<br/><br/></p>
-<div class="figure align-default" id="add-static">
-<img alt="../_images/add_static.png" src="../_images/add_static.png" />
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Add a _static folder</span><a class="headerlink" href="#add-static" title="Permalink to this image">¶</a></p>
-</div>
-<p>a. Put a afigurefile.png file into the folder as shown in <a class="reference internal" href="#add-figure"><span class="std std-numref">Figure 12</span></a>.
-<br/><br/></p>
-<div class="figure align-default" id="add-figure">
-<img alt="../_images/add_figure.png" src="../_images/add_figure.png" />
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Add a figure in the _static folder</span><a class="headerlink" href="#add-figure" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>Go to the “newcontent.md” file. In the file add the following line to add the figure into the page as shown in <a class="reference internal" href="#add-command"><span class="std std-numref">Figure 13</span></a>.
-<br/><br/></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} /_static/afigurefile.jpg
-:name: add_figure
-
-Add a figure in the _static folder
-```
-</pre></div>
-</div>
-<div class="figure align-default" id="add-command">
-<img alt="../_images/add_figcommand.png" src="../_images/add_figcommand.png" />
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Add a the command in the “newcontent.md” file</span><a class="headerlink" href="#add-command" title="Permalink to this image">¶</a></p>
-</div>
-<p>a. Build the book. You can see the result on your browser.</p>
-<div class="figure align-default" id="fig-res">
-<a class="reference internal image-reference" href="../_images/fig_res.png"><img alt="../_images/fig_res.png" src="../_images/fig_res.png" style="width: 561.0px; height: 285.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Result of adding the figure onto the page</span><a class="headerlink" href="#fig-res" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>You can reference the figure in your text with the following command in the “new_content.md” file as shown in <a class="reference internal" href="#add-ref"><span class="std std-numref">Figure 15</span></a>.
-<br/><br/></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{numref}`Figure %s &lt;add_figure&gt;`
-</pre></div>
-</div>
-<div class="figure align-default" id="add-ref">
-<img alt="../_images/add_refcommand.png" src="../_images/add_refcommand.png" />
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Reference the figure in your text</span><a class="headerlink" href="#add-ref" title="Permalink to this image">¶</a></p>
-</div>
-<p>a. Build the book. You can see the result in your browser.</p>
-<div class="figure align-default" id="ref-res">
-<img alt="../_images/ref_res.png" src="../_images/ref_res.png" />
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Referencing your figure in your text.</span><a class="headerlink" href="#ref-res" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-</ol>
-</div>
-<span id="document-docs/025hyperref"></span><div class="section" id="reference-to-other-documents-hyperlink-and-folder-structure">
-<h3>Reference to Other Documents, Hyperlink and Folder Structure<a class="headerlink" href="#reference-to-other-documents-hyperlink-and-folder-structure" title="Permalink to this headline">¶</a></h3>
-<ol>
-<li><p>You can reference to other documents in the book by using this command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{doc}`020steps`
-</pre></div>
-</div>
-</li>
-<li><p>You can create a hyperlink with this command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">text</span> <span class="n">that</span> <span class="n">will</span> <span class="n">appear</span> <span class="ow">in</span> <span class="n">content</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">the</span><span class="o">-</span><span class="n">hyperlink</span><span class="o">.</span><span class="n">com</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-<li><p>You can move the documents to a “docs” folder for a cleaner folder structure. You just have to specify the files in the “_toc.yml” file as “docs/file”. This is shown in <a class="reference internal" href="#restructure-folder"><span class="std std-numref">Figure 17</span></a></p>
-<div class="figure align-default" id="restructure-folder">
-<img alt="../_images/restructure_folder.png" src="../_images/restructure_folder.png" />
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">You can restructure your book folder as shown</span><a class="headerlink" href="#restructure-folder" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-</ol>
-</div>
-<span id="document-docs/026citation"></span><div class="section" id="adding-a-citation">
-<h3>Adding a Citation<a class="headerlink" href="#adding-a-citation" title="Permalink to this headline">¶</a></h3>
-<ol>
-<li><p>You will need to have a “reference.bib” file in your book folder.</p></li>
-<li><p>You can add a citation with this command</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{cite}`chen_exploring_2020`
-</pre></div>
-</div>
-</li>
-<li><p>You can generate the bibliography with this command. Remember to specify the right path to the .bib file. If the .bib file is in the previous folder specify it as “../references.bib”</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
-{bibliography} references.bib
-```
-</pre></div>
-</div>
-</li>
-</ol>
-<div class="section" id="example">
-<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
-<p>I want to cite this article <a class="bibtex reference internal" href="docs/010intro.html#chen-exploring-2020" id="id1">[CTM+20]</a>.</p>
-</div>
-<div class="section" id="bibliography">
-<h4>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h4>
-<p id="bibtex-bibliography-docs/026citation-0"><dl class="citation">
-<dt class="bibtex label" id="chen-exploring-2020"><span class="brackets"><a class="fn-backref" href="#id1">CTM+20</a></span></dt>
-<dd><p>Kian Wee Chen, Eric Teitelbaum, Forrest Meggers, Jovan Pantelic, and Adam Rysanek. Exploring membrane-assisted radiant cooling for designing comfortable naturally ventilated spaces in the tropics. <em>Building Research &amp; Information</em>, pages 1–13, November 2020. Publisher: Routledge. URL: <a class="reference external" href="https://doi.org/10.1080/09613218.2020.1847025">https://doi.org/10.1080/09613218.2020.1847025</a>, <a class="reference external" href="https://doi.org/10.1080/09613218.2020.1847025">doi:10.1080/09613218.2020.1847025</a>.</p>
-</dd>
-</dl>
-</p>
-</div>
-</div>
-<span id="document-docs/027pubonline"></span><div class="section" id="publish-your-book-on-github">
-<h3>Publish your Book on Github<a class="headerlink" href="#publish-your-book-on-github" title="Permalink to this headline">¶</a></h3>
-<ol>
-<li><p><span class="xref myst">Register a Github account</span></p></li>
-<li><p>Once registered. Create a new repository as shown (<a class="reference internal" href="#create-repo"><span class="std std-numref">Figure 18</span></a>).</p>
-<div class="figure align-default" id="create-repo">
-<a class="reference internal image-reference" href="../_images/create_repo.png"><img alt="../_images/create_repo.png" src="../_images/create_repo.png" style="width: 586.4px; height: 722.4000000000001px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Create a repository on Github</span><a class="headerlink" href="#create-repo" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>For people who are not comfortable with CMD terminal. <a class="reference external" href="https://desktop.github.com/">Download Github Desktop</a>. The rest of the steps assumed you are using github desktop.</p></li>
-<li><p>Clone the repository you just created onto your local computer as shown in <a class="reference internal" href="#clone-repo"><span class="std std-numref">Figure 19</span></a>.</p>
-<div class="figure align-default" id="clone-repo">
-<img alt="../_images/clone_repo.png" src="../_images/clone_repo.png" />
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Clone the repository from github using github desktop</span><a class="headerlink" href="#clone-repo" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>Copy and paste your book folder into the local repository. Now on github desktop you will see all the changes. “Commit to main” and then “Push Origin”. You will see your repository populated with all your files.</p>
-<div class="figure align-default" id="commit-git">
-<img alt="../_images/commit_git.png" src="../_images/commit_git.png" />
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Commit and sync the files onto the github repository</span><a class="headerlink" href="#commit-git" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>Install ghp-import to compile and host your book on Github-pages. Go to your anaconda environment and activate your jupyterbook environment as shown here <a class="reference internal" href="docs/010intro.html#document-docs/021installation"><span class="doc">Installation</span></a>. Once you activated the environment, execute this command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
-</pre></div>
-</div>
-</li>
-<li><p>Go to the settings of your github repository. Turn on gh-pages, set your branch to gh-pages and folder to /root as shown in <a class="reference internal" href="#gh-pages"><span class="std std-numref">Figure 21</span></a>.</p>
-<div class="figure align-default" id="gh-pages">
-<img alt="../_images/gh_pages.png" src="../_images/gh_pages.png" />
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Turn on the gh-pages settings on your repository.</span><a class="headerlink" href="#gh-pages" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-<li><p>Once that is done. On your local computer, cd to your book folder (the folder should contain the _build directory) and execute the following command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
-</pre></div>
-</div>
-<div class="figure align-default" id="ghp-import">
-<img alt="../_images/ghp_import.png" src="../_images/ghp_import.png" />
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Successfully executed ghp-import.</span><a class="headerlink" href="#ghp-import" title="Permalink to this image">¶</a></p>
-</div>
-</li>
-</ol>
-</div>
-<span id="document-docs/028pdf"></span><div class="section" id="generate-pdf">
-<h3>Generate PDF<a class="headerlink" href="#generate-pdf" title="Permalink to this headline">¶</a></h3>
-<ol>
-<li><p>Install pyppeteer with the following command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyppeteer</span>
-</pre></div>
-</div>
-</li>
-<li><p>Then build your book with the following command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">mybookname</span><span class="o">/</span> <span class="o">--</span><span class="n">builder</span> <span class="n">pdfhtml</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -497,6 +265,7 @@ Add a figure in the _static folder
     
     <div class='prev-next-bottom'>
         
+    <a class='right-next' id="next-link" href="020steps.html" title="next page">Steps to Write a Jupyter Book</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
