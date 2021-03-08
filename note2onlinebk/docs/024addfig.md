@@ -14,12 +14,13 @@
 
     Add a figure in the _static folder
     ```
-2. Go to the "newcontent.md" file. In the file add the following line to add the figure into the page as shown in {numref}`Figure %s <add_command>`.
+2. Go to the "newcontent.md" file. In the file add the following line to add the figure into the page as shown in {numref}`Figure %s <add_command>`. To scale the figure, you can either use the scale or width command. The width command will give lesser distortion to a image.
     <br/><br/>
     ````
     ```{figure} /_static/afigurefile.jpg
     :name: add_figure
-
+    scale: 50%
+    width: 50%
     Add a figure in the _static folder
     ```
     ````
