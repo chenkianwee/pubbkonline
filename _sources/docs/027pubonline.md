@@ -25,14 +25,7 @@
     ```
     pip install ghp-import
     ```
-
-7. Go to the settings of your github repository. Turn on gh-pages, set your branch to gh-pages and folder to /root as shown in {numref}`Figure %s <gh_pages>`.
-    ```{figure} /_static/steps/gh_pages.png
-    :name: gh_pages
-
-    Turn on the gh-pages settings on your repository.
-    ```
-8. Once that is done. On your local computer, cd to your book folder (the folder should contain the _build directory) and execute the following command.
+7. Once that is done. On your local computer, cd to your book folder (the folder should contain the _build directory) and execute the following command. This will automatically create a gh page branch of your repository.
     ```
     ghp-import -n -p -f _build/html
     ```
@@ -40,4 +33,10 @@
     :name: ghp_import
 
     Successfully executed ghp-import.
+    ```
+8. Go to the settings of your github repository. Turn on gh-pages, set your branch to gh-pages and folder to /root as shown in {numref}`Figure %s <gh_pages>`.
+    ```{figure} /_static/steps/gh_pages.png
+    :name: gh_pages
+
+    Turn on the gh-pages settings on your repository.
     ```
