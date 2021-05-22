@@ -250,6 +250,33 @@
 <p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">You can restructure your book folder as shown</span><a class="headerlink" href="#restructure-folder" title="Permalink to this image">¶</a></p>
 </div>
 </li>
+<li><p>create a hyperlink that opens a new tab.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://www.qgis.org/en/site/&quot;</span> <span class="n">target</span><span class="o">=</span><span class="s2">&quot;_blank&quot;</span><span class="o">&gt;</span><span class="n">here</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>create part -&gt; chapters -&gt; section for the toc of your book.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">intro</span>
+  <span class="n">numbered</span><span class="p">:</span> <span class="n">true</span>
+<span class="o">-</span> <span class="n">part</span><span class="p">:</span> <span class="n">Concepts</span>
+  <span class="n">chapters</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="mi">010</span><span class="o">/</span><span class="mi">010</span><span class="n">gis</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="mi">010</span><span class="o">/</span><span class="mi">011</span><span class="n">crs</span>
+<span class="o">-</span> <span class="n">part</span><span class="p">:</span> <span class="n">Workflows</span>
+  <span class="n">chapters</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="mi">020</span><span class="o">/</span><span class="mi">020</span><span class="n">workflow1</span>
+<span class="o">-</span> <span class="n">part</span><span class="p">:</span> <span class="n">Tasks</span>
+  <span class="n">chapters</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="mi">030</span><span class="o">/</span><span class="mi">030</span><span class="n">task1</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="mi">030</span><span class="o">/</span><span class="mi">031</span><span class="n">task2</span>
+      <span class="n">sections</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="mi">030</span><span class="o">/</span><span class="mi">031</span><span class="n">task21</span>
+        <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="mi">030</span><span class="o">/</span><span class="mi">031</span><span class="n">task22</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="mi">030</span><span class="o">/</span><span class="mi">032</span><span class="n">task3</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="mi">030</span><span class="o">/</span><span class="mi">033</span><span class="n">task4</span>
+</pre></div>
+</div>
+</li>
 </ol>
 </div>
 
